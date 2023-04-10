@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input_create" type="number" value="" size="50px" placeholder="The Name Student"
+       style="margin-bottom: 2px"/>
+<input id="create" type="button" value="Create" onclick="createStudent()"/><br>
+
+<script>
+  let arrStudents = [];
+  function createStudent() {
+    let newStudent = document.getElementById('input_create').value;
+    if (newStudent.trim() === '') {
+      document.getElementById('validate').innerHTML = '<b style= "color: rosybrown">The name is required! please try again!</b>'
+      return;
+    }
+    arrStudents.push(newStudent);
+    document.getElementById('validate').innerHTML = '<b style= "color: blue">Create student success!</b>'
+    createStudent();
+
+for (let i = 0; i < arrStudents.length-1; i++) {
+let $tg = 0;
+for (let j = i + 1; j < arrStudents.length; j++) {
+if (arrStudents[i] > arrStudents[j]){
+$tg = arrStudents[i];
+arrStudents[i] = arrStudents[j];
+arrStudents[j] =$tg;
+}
+
+}
+
+}
+document.writeln(arrStudents[]);
+</script>
+</body>
+</html>

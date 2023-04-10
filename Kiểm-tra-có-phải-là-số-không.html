@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text"id="input"/> <button onclick="isNumber(value)">hiển thị</button>
+<h1 id="hienthi"></h1>
+<script>
+    let a = document.getElementById('input').value;
+ function isNumber(valu) {
+
+   if(typeof valu === 'number') {
+       document.getElementById('hienthi').innerHTML = `<button>ko là só</button>`}
+       //  if (typeof value === 'string'){
+       // alert('ko là số')}
+       //  if (typeof value === 'boolean'){
+       //      alert('ko là só')}
+       //  if (typeof value === 'null'){
+       //      alert('ko là số')}
+       //  } else {
+       // alert('là số')
+
+ }
+ isNumber(a);
+</script>
+</body>
+</html>

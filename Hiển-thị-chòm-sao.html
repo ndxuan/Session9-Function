@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="timsao"/> <button onclick="checkStar()">Tìm chòm sao</button> <br> <br>
+<h1 id="hienthi"></h1>
+<script>
+  let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+  let cStar = ['Ursa Minor', 'Tarurus' , 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+function checkStar() {
+  let nameStar = document.getElementById('timsao').value;
+  for (let i = 0; i < star.length; i++) {
+    if (nameStar == star[i]) {
+      document.getElementById('hienthi').innerHTML = `<button>${cStar[i]}</button>`
+      break;
+    } else {
+      document.getElementById('hienthi').innerHTML = '<button>không tìm thấy ngôi sao nào</button>';
+    }
+  }
+}
+</script>
+</body>
+</html>
